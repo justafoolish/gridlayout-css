@@ -1,6 +1,6 @@
 module.exports = {
   mode: "jit",
-  content: ["./src/**/*.{js,jsx,ts,tsx}","./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
+  content: ["./src/**/*.{js,jsx,ts,tsx}", "./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
@@ -60,7 +60,7 @@ module.exports = {
             opacity: "0",
             transform: "translateY(50px)"
           },
-          "100%" :{
+          "100%": {
             opacity: "1",
             transform: "translateY(0px)"
           }
@@ -69,7 +69,7 @@ module.exports = {
           "0%": {
             transform: "translate(0%,0%)"
           },
-          "100%" : {
+          "100%": {
             transform: "translate(-265%,-100%)"
           }
         },
@@ -77,7 +77,7 @@ module.exports = {
           "0%": {
             transform: "translate(0%,0%)"
           },
-          "100%" : {
+          "100%": {
             transform: "translate(-85%,0%)"
           }
         },
@@ -85,7 +85,7 @@ module.exports = {
           "0%": {
             transform: "translate(0%,0%)"
           },
-          "100%" : {
+          "100%": {
             transform: "translate(5%,100%)"
           }
         },
@@ -93,7 +93,7 @@ module.exports = {
           "0%": {
             transform: "translate(0%,0%)"
           },
-          "100%" : {
+          "100%": {
             transform: "translate(-5%,100%) rotate(90deg)"
           }
         },
@@ -101,7 +101,7 @@ module.exports = {
           "0%": {
             transform: "translate(0%,0%)"
           },
-          "100%" : {
+          "100%": {
             transform: "translate(185%,-100%)"
           }
         },
@@ -109,37 +109,44 @@ module.exports = {
           "from": {
             transform: "translate(0%,0%)"
           },
-          "to" : {
+          "to": {
             transform: "translate(175%,0%)"
           }
         },
         circle: {
-          "from" : {
+          "from": {
             transform: "translate(65%,-50%)"
           },
-          "to" : {
+          "to": {
             transform: "translate(-50%,-50%)"
           }
         },
         rainbow: {
-          "0%": {backgroundColor: "#000"},
-          "25%": {backgroundColor: "#01c7af"},
-          "35%": {backgroundColor: "#feb287"},
-          "45%": {backgroundColor: "#630b04"},
-          "55%": {backgroundColor: "#990dac"},
-          "65%": {backgroundColor: "#1a0492"},
-          "75%": {backgroundColor: "#dd0010"},
-          "85": {backgroundColor: "#ffcccd"},
-          "90%": {backgroundColor: "#f6a713"},
-          "92%": {backgroundColor: "#09a84f"},
-          "94%": {backgroundColor: "#ffe603"},
-          "96%": {backgroundColor: "#cc1481"},
-          "98%": {backgroundColor: "#f7e800"},
-          "99%": {backgroundColor: "#c80e81"},
-          "100%": {backgroundColor: "#01c7af"},
+          "0%": {
+            opacity: "0.7",
+            backgroundColor: "#000"
+          },
+          "25%": { backgroundColor: "#01c7af" },
+          "35%": { backgroundColor: "#feb287" },
+          "45%": { backgroundColor: "#630b04" },
+          "55%": { backgroundColor: "#990dac" },
+          "65%": { backgroundColor: "#1a0492" },
+          "75%": { backgroundColor: "#dd0010" },
+          "85%": { backgroundColor: "#ffcccd" },
+          "90%": { backgroundColor: "#f6a713" },
+          "92%": { backgroundColor: "#09a84f" },
+          "94%": { backgroundColor: "#ffe603" },
+          "96%": { backgroundColor: "#cc1481" },
+          "98%": { backgroundColor: "#f7e800" },
+          "99%": { backgroundColor: "#c80e81" },
+          "100%": {
+            opacity: "0.7",
+            backgroundColor: "#01c7af"
+          },
         }
       }
     },
   },
-  plugins: [],
+  plugins: [
+  ],
 }
