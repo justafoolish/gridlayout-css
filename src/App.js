@@ -42,7 +42,7 @@ const App = () => {
 
   //start game first mount
   useEffect(() => {
-    resetTurn()
+    shuffleCard()
   }, [])
 
   //compare choices
