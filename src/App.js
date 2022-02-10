@@ -65,32 +65,31 @@ const App = () => {
 
   return (
     <div className="relative">
-      {(renderWelcome && (
+      {renderWelcome && (
         <div className="absolute inset-0 z-50">
           <Welcome handleClose={handleCloseWelcome} />
         </div>
-      )) || (
-          <div className="min-h-screen">
-            <div className="m-auto px-10 py-4 rounded-lg">
-              <h3 className="font-medium text-3xl m-auto animate-pulse text-stone-700">Memory game w/ LOONA</h3>
-            </div>
-            <div className="flex items-center justify-center my-5">
-              <button onClick={shuffleCard} className="bg-violet-100 hover:bg-violet-200 transition-all text-violet-700 p-3 rounded-xl">New Game</button>
-              <div className="mx-5 bg-green-100 text-green-800 p-2 rounded-xl text-2xl font-medium">Turn: {turns}</div>
-            </div>
-            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 mx-10 mt-5 gap-6">
-              {cards.map(card => (
-                <Card
-                  key={card.id}
-                  card={card}
-                  handleChoice={handleChoice}
-                  flipped={card.matched || card === firstChoice || card === secondChoice}
-                  disabled={disabled}
-                />
-              ))}
-            </div>
-          </div>
-        )}
+      )}
+      <div className="min-h-screen">
+        <div className="m-auto px-10 py-4 rounded-lg">
+          <h3 className="font-medium text-3xl m-auto animate-pulse text-stone-700">Memory game w/ LOONA</h3>
+        </div>
+        <div className="flex items-center justify-center my-5">
+          <button onClick={shuffleCard} className="bg-violet-100 hover:bg-violet-200 transition-all text-violet-700 p-3 rounded-xl">New Game</button>
+          <div className="mx-5 bg-green-100 text-green-800 p-2 rounded-xl text-2xl font-medium">Turn: {turns}</div>
+        </div>
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 mx-10 mt-5 gap-6">
+          {cards.map(card => (
+            <Card
+              key={card.id}
+              card={card}
+              handleChoice={handleChoice}
+              flipped={card.matched || card === firstChoice || card === secondChoice}
+              disabled={disabled}
+            />
+          ))}
+        </div>
+      </div>
     </div>
   );
 };
